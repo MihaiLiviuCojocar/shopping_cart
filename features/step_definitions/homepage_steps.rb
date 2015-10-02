@@ -1,4 +1,4 @@
-Given(/^I visit the home page$/) do
+Given(/^I visit the products page$/) do
   visit '/products'
 end
 
