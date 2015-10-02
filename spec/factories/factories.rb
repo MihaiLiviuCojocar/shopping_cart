@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :product do
-    name "Flip Flops"
-    price 10.99
+    name Faker::Commerce.product_name
+    price Faker::Commerce.price
   end
 end
