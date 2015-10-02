@@ -1,3 +1,10 @@
-<% @products.each do |product| %>
-  <%= product.name %>
-<% end %>
+<div class="row">
+  <% @products.each do |product| %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <%= image_tag(product.image, size: '100') %>
+        <%= product.name %>
+      </div>
+    </div>
+  <% end %>
+</div>
