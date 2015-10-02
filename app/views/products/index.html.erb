@@ -1,3 +1,4 @@
 <% @products.each do |product| %>
   <%= product.name %>
+  <%= image_tag(product.image, size: '100') %>
 <% end %>
