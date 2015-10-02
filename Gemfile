@@ -22,5 +22,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'shoulda-matchers'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'faker'
+  gem 'launchy'
 end
 
