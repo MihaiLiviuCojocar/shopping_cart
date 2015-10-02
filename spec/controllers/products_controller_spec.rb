@@ -4,6 +4,6 @@ RSpec.describe ProductsController, type: :controller do
   describe 'GET #show' do
     before { get :index }
 
-    it { should render_template('index') }
+    it { is_expected.to render_template('index') }
   end
 end
