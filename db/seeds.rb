@@ -72,7 +72,7 @@ Product.create(
   category: Category.where(name: "Men’s Casualwear").first_or_create,
   stocks: [
     Stock.create(quantity: 9, color_id: Color.where(name: 'Grey').first.id),
-    Stock.create(quantity: 3, color_id: Color.where(name: 'Green').first.id)
+    Stock.create(quantity: 3, color_id: Color.where(name: 'Green').first.id, sale_price: 39.99)
     ])
 
 Product.create(
