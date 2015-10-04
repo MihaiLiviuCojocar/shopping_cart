@@ -1,22 +1,12 @@
-Color.create(name: 'Red')
-Color.create(name: 'Blue')
-Color.create(name: 'Patent Black')
-Color.create(name: 'Tan')
-Color.create(name: 'Black')
-Color.create(name: 'Medium Red')
-Color.create(name: 'Grey')
-Color.create(name: 'Green')
-Color.create(name: 'Charcoal')
-Color.create(name: 'Deer')
-Color.create(name: 'Pink')
-
 Product.create(
   name: 'Almond Toe Court Shoes',
   price: 99.00,
   image: 't-shirt.jpg',
   category: Category.where(name: "Women’s Footwear").first_or_create,
   stocks: [
-    Stock.create(quantity: 5, color_id: Color.where(name: 'Patent Black').first.id)
+    Stock.create(
+      quantity: 5,
+      color: Color.where(name: 'Patent Black').first_or_create)
     ])
 
 Product.create(
@@ -25,7 +15,9 @@ Product.create(
   image: 'flip_flops.jpg',
   category: Category.where(name: "Women’s Footwear").first_or_create,
   stocks: [
-    Stock.create(quantity: 4, color_id: Color.where(name: 'Blue').first.id)
+    Stock.create(
+      quantity: 4,
+      color: Color.where(name: 'Blue').first_or_create)
     ])
 
 Product.create(
@@ -34,7 +26,9 @@ Product.create(
   image: 'flip_flops.jpg',
   category: Category.where(name: "Men’s Footwear").first_or_create,
   stocks: [
-    Stock.create(quantity: 12, color_id: Color.where(name: 'Tan').first.id)
+    Stock.create(
+      quantity: 12,
+      color: Color.where(name: 'Tan').first_or_create)
     ])
 
 Product.create(
@@ -43,8 +37,12 @@ Product.create(
   image: 't-shirt.jpg',
   category: Category.where(name: "Men’s Footwear").first_or_create,
   stocks: [
-    Stock.create(quantity: 6, color_id: Color.where(name: 'Red').first.id),
-    Stock.create(quantity: 0, color_id: Color.where(name: 'Blue').first.id)
+    Stock.create(
+      quantity: 6,
+      color: Color.where(name: 'Red').first_or_create),
+    Stock.create(
+      quantity: 0,
+      color: Color.where(name: 'Blue').first_or_create)
     ])
 
 Product.create(
@@ -53,7 +51,9 @@ Product.create(
   image: 'flip_flops.jpg',
   category: Category.where(name: "Women’s Casualwear").first_or_create,
   stocks: [
-    Stock.create(quantity: 6, color_id: Color.where(name: 'Black').first.id)
+    Stock.create(
+      quantity: 6,
+      color: Color.where(name: 'Black').first_or_create)
     ])
 
 Product.create(
@@ -62,7 +62,9 @@ Product.create(
   image: 'flip_flops.jpg',
   category: Category.where(name: "Women’s Casualwear").first_or_create,
   stocks: [
-    Stock.create(quantity: 5, color_id: Color.where(name: 'Medium Red').first.id)
+    Stock.create(
+      quantity: 5,
+      color: Color.where(name: 'Medium Red').first_or_create)
     ])
 
 Product.create(
@@ -71,8 +73,13 @@ Product.create(
   image: 't-shirt.jpg',
   category: Category.where(name: "Men’s Casualwear").first_or_create,
   stocks: [
-    Stock.create(quantity: 9, color_id: Color.where(name: 'Grey').first.id),
-    Stock.create(quantity: 3, color_id: Color.where(name: 'Green').first.id, sale_price: 39.99)
+    Stock.create(
+      quantity: 9,
+      color: Color.where(name: 'Grey').first_or_create),
+    Stock.create(
+      quantity: 3,
+      color: Color.where(name: 'Green').first_or_create,
+      sale_price: 39.99)
     ])
 
 Product.create(
@@ -81,7 +88,9 @@ Product.create(
   image: 'flip_flops.jpg',
   category: Category.where(name: "Men’s Formalwear").first_or_create,
   stocks: [
-    Stock.create(quantity: 2, color_id: Color.where(name: 'Charcoal').first.id)
+    Stock.create(
+      quantity: 2,
+      color: Color.where(name: 'Charcoal').first_or_create)
     ])
 
 Product.create(
@@ -90,7 +99,9 @@ Product.create(
   image: 't-shirt.jpg',
   category: Category.where(name: "Men’s Formalwear").first_or_create,
   stocks: [
-    Stock.create(quantity: 1, color_id: Color.where(name: 'Deer').first.id)
+    Stock.create(
+      quantity: 1,
+      color: Color.where(name: 'Deer').first_or_create)
     ])
 
 Product.create(
@@ -99,7 +110,9 @@ Product.create(
   image: 'flip_flops.jpg',
   category: Category.where(name: "Women’s Formalwear").first_or_create,
   stocks: [
-    Stock.create(quantity: 10, color_id: Color.where(name: 'Black').first.id)
+    Stock.create(
+      quantity: 10,
+      color: Color.where(name: 'Black').first_or_create)
     ])
 
 Product.create(
@@ -108,5 +121,7 @@ Product.create(
   image: 't-shirt.jpg',
   category: Category.where(name: "Women’s Formalwear").first_or_create,
   stocks: [
-    Stock.create(quantity: 5, color_id: Color.where(name: 'Pink').first.id)
+    Stock.create(
+      quantity: 5,
+      color: Color.where(name: 'Pink').first_or_create)
     ])
